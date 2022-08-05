@@ -1,0 +1,472 @@
+.app__navbar {
+  width: 100%;
+}
+
+.app__navbar-header {
+  text-align: center;
+
+  p {
+    background-color: var(--color-announcement);
+    padding: 0.7rem 0;
+    color: #fff;
+    letter-spacing: 0.2rem;
+    font-size: 1.1rem;
+
+    span {
+      font-weight: 200;
+      font-size: 1rem;
+
+      letter-spacing: normal;
+    }
+  }
+
+  .app__navbar-social {
+    text-align: end;
+    padding: 0.4rem 4rem;
+
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+    a {
+      color: var(--black-color);
+      text-decoration: none;
+
+      svg {
+        font-size: 1.7rem;
+        margin: 0 0.8rem;
+      }
+    }
+
+    @media screen and (max-width: 767px) {
+      display: none;
+    }
+  }
+}
+
+.search-icon-menu {
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.user__icon-menu {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+}
+
+.forHeight{
+  height: 14.6rem;
+
+  @media screen and (max-width: 767px) {
+    height: 10rem;
+  }
+}
+
+.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  animation: fixed 1s;
+  z-index: 555;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+@keyframes fixed {
+  0%{
+    top: -20rem;
+  }
+  100%{
+    top: 0;
+  }
+}
+
+.app__navbar-links-header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem 0;
+
+  list-style: none;
+
+  .app__search-bar {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 10rem;
+    width: 100%;
+    background-color: #fff;
+    z-index: 5;
+
+    box-shadow: 0.1rem 0.1rem .5rem rgba(0, 0, 0, 0.1);
+
+    i {
+      font-size: 3.3rem;
+    }
+
+    .app__search-items{
+      display: flex;
+      justify-content: center;
+
+      .close-searchBar{
+        padding: 0;
+        align-items: center;
+        height: 5rem;
+        cursor: pointer;
+      }
+
+      .app__search-barIcon{
+        margin-top: 1rem;
+        font-size: 2.3rem;
+      }
+
+      input {
+        width: 80%;
+        margin: 0 2rem;
+        height: 4rem;
+        border: none;
+        -webkit-font-smoothing: antialiased;
+
+        color: #a0a0a0;
+
+        font-weight: lighter;
+        &:focus {
+          outline: none;
+        }
+
+        &::placeholder {
+          font-size: 1.4rem;
+          color: #aaa;
+        }
+      }
+    }
+
+
+    div {
+      padding: 5rem 0;      
+    }
+  }
+
+  .hamburger {
+    cursor: pointer;
+    div {
+      width: 3rem;
+      height: 0.2rem;
+      background-color: #000;
+      margin-top: 0.6rem;
+
+      &:nth-child(2) {
+        width: 2.5rem;
+      }
+    }
+
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
+  }
+
+  svg {
+    font-size: 2rem;
+    cursor: pointer;
+  }
+
+  @media screen and (max-width: 767px) {
+    .search-icon {
+      display: none;
+    }
+  }
+}
+
+.app__navbar-links {
+  padding-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+
+  list-style: none;
+
+  li {
+    margin: 0 1.7rem;
+    padding-bottom: 0.5rem;
+
+    a {
+      position: relative;
+
+      text-decoration: none;
+      text-transform: capitalize;
+      letter-spacing: 0.1rem;
+
+      font-size: 1.4rem;
+      font-weight: 300;
+
+      color: #000;
+
+      &::before {
+        position: absolute;
+        content: "";
+
+        background-color: #000;
+        border-radius: 2rem;
+
+        width: 0%;
+        height: 0.2rem;
+        left: 0;
+
+        bottom: -0.3rem;
+        transition: all 0.3s ease;
+      }
+      &:hover::before {
+        width: 100%;
+      }
+    }
+    &:hover .link-hover {
+      display: block;
+    }
+
+    @media screen and (max-width: 820px) {
+      margin: 0 1.4rem;
+    }
+  }
+
+  .link-hover {
+    position: absolute;
+    display: none;
+    left: 0;
+    margin: 0;
+    margin-top: 0.5rem;
+    width: 100%;
+    box-shadow: 0.1rem 0.5rem 0.8rem rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    padding: 3rem 0;
+    .links-visible {
+      display: flex;
+      justify-content: center;
+
+      ul {
+        list-style: none;
+        margin: 0 3rem;
+
+        li {
+          &:first-child {
+            font-weight: 400;
+            font-size: 1.4rem;
+            letter-spacing: 0.1rem;
+            margin-bottom: 1.3rem;
+          }
+          font-size: 1.3rem;
+          font-weight: 300;
+        }
+      }
+    }
+
+    &:hover {
+      display: block;
+    }
+
+    @media screen and (max-width: 767px) {
+      display: none;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+}
+
+.app__menu-back {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.app__menu-wrapper {
+  li {
+    list-style: none;
+  }
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: scroll;
+
+  width: 35rem;
+  height: 100vh;
+
+  background-color: #fff;
+
+  padding: 2rem;
+
+  .close__btn-wrapper {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: end;
+
+    .close-btn {
+      width: 4rem;
+      height: 4rem;
+      // background-color: rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 50%;
+
+      div {
+        width: 2.2rem;
+        height: 0.2rem;
+        background-color: #000;
+
+        &:first-child {
+          transform: rotate(45deg) translateX(0rem);
+        }
+        &:last-child {
+          transform: rotate(-45deg) translateX(0.1rem) translateY(-0.2rem);
+        }
+      }
+    }
+  }
+
+  .collapse-header {
+    .app__menu-heading {
+      font-size: 1.7rem;
+      letter-spacing: 0.1rem;
+      color: #000;
+      text-decoration: none;
+    }
+
+    // Accordion customize css
+    .css-1elwnq4-MuiPaper-root-MuiAccordion-root {
+      background-color: transparent;
+      box-shadow: none;
+    }
+    .css-sh22l5-MuiButtonBase-root-MuiAccordionSummary-root {
+      width: 100% !important;
+      padding: 0px !important;
+    }
+
+    .css-15v22id-MuiAccordionDetails-root {
+      padding: 0;
+    }
+
+    .MuiAccordionSummary-content {
+      margin: 0;
+    }
+    .css-sh22l5-MuiButtonBase-root-MuiAccordionSummary-root.Mui-expanded {
+      min-height: 4.8rem;
+    }
+
+    .Mui-expanded {
+      margin: 0;
+    }
+
+    .css-1elwnq4-MuiPaper-root-MuiAccordion-root.Mui-expanded:before {
+      opacity: 1;
+    }
+
+    .css-1elwnq4-MuiPaper-root-MuiAccordion-root:before {
+      background-color: #fafafa;
+    }
+    .MuiAccordionSummary-expandIconWrapper {
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: -1rem;
+        z-index: 432;
+        top: 50%;
+        transform: translateY(-50%);
+
+        background-color: #fafafa;
+        width: 0.1rem;
+        height: 2rem;
+      }
+
+      &:hover {
+        background-color: #fafafa;
+      }
+    }
+    // Accordion customize css End
+
+    .visible__links-header {
+      a {
+        font-size: 1.2rem;
+        font-weight: 300;
+        text-decoration: none;
+        color: #000;
+      }
+
+      .MuiAccordionSummary-expandIconWrapper {
+        border: 1px solid #000;
+        color: #000;
+        border-radius: 50%;
+      }
+    }
+
+    .visible__links {
+      position: relative;
+      display: block;
+
+      border-left: 1px solid #000;
+      margin: 0 auto;
+      padding: 0.6rem 2rem;
+
+      a {
+        font-size: 1.2rem;
+        font-weight: 300;
+
+        text-decoration: none;
+        color: #000;
+      }
+    }
+  }
+
+  .login-link {
+    // margin: 1rem 0;
+    height: 4.8rem;
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #fafafa;
+    border-bottom: 1px solid #fafafa;
+
+    a {
+      color: #000;
+      text-decoration: none;
+      font-size: 1.4rem;
+      font-weight: 300;
+    }
+  }
+
+  .menu-social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    a {
+      padding: 1rem 4rem 0.5rem 4rem;
+      border: 1px solid #fafafa;
+      display: block;
+      color: #000;
+      font-size: 2.5rem;
+
+      &:nth-child(1) {
+        border-left: none;
+      }
+
+      &:nth-child(3) {
+        border-right: none;
+      }
+
+      &:nth-child(2) {
+        border-left: none;
+        border-right: none;
+      }
+    }
+  }
+
+  @media screen and (min-width: 767px) {
+    display: none;
+  }
+}
