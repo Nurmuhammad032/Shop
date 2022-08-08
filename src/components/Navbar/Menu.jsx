@@ -6,7 +6,7 @@ import { AccordionDetails } from "@mui/material";
 import ExpandMore from "@mui/icons-material/ExpandMore";
 const Menu = ({ links }) => {
   return (
-    <motion.div className="app__menu" whileInView={{ opacity: [0, 1] }}>
+    <motion.div className="app__menu" whileInView={{ opacity: [0, 1] }} style={{zIndex: '10000'}}>
       {links.map((link) => (
         <motion.div
           whileInView={{ opacity: [0, 1], y: [10, 0] }}

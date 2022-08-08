@@ -25,6 +25,11 @@ const Products = () => {
         <ProductComponent image={images.s4Img3} link={"shop accessories"} />
         <ProductComponent image={images.s4Img4} link={"shop sunglasses"} />
       </div>
+      <div className="app__product-info">
+        <a href="#">
+          BUY HER A GIFT CARD <span>shop gift cards</span>
+        </a>
+      </div>
     </>
   );
 };

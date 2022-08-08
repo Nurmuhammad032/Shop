@@ -23,6 +23,19 @@ import s4Img2 from "../assets/section4-img2.jpg";
 import s4Img3 from "../assets/section4-img3.jpg";
 import s4Img4 from "../assets/section4-img4.jpg";
 
+import defaultImg1 from "../assets/defaultImg1.jpg";
+import shoes1 from "../assets/shoes-1.jpg";
+import shoes2 from "../assets/shoes-2.jpg";
+import shoes3 from "../assets/shoes-3.jpg";
+import shoes4 from "../assets/shoes-4.jpg";
+import shoes5 from "../assets/shoes-5.jpg";
+import shoes6 from "../assets/shoes-6.jpg";
+import shoes7 from "../assets/shoes-7.jpg";
+import shoes8 from "../assets/shoes-8.jpg";
+import shoes9 from "../assets/shoes-9.jpg";
+import shoes10 from "../assets/shoes-10.jpg";
+import shoes11 from "../assets/shoes-11.jpg";
+
 export default {
   dressHover,
   dressHover2,
@@ -48,4 +61,16 @@ export default {
   s4Img2,
   s4Img3,
   s4Img4,
+  defaultImg1,
+  shoes1,
+  shoes2,
+  shoes3,
+  shoes4,
+  shoes5,
+  shoes6,
+  shoes7,
+  shoes8,
+  shoes9,
+  shoes10,
+  shoes11,
 };

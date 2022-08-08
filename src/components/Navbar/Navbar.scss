@@ -54,7 +54,7 @@
   }
 }
 
-.forHeight{
+.forHeight {
   height: 14.6rem;
 
   @media screen and (max-width: 767px) {
@@ -68,15 +68,15 @@
   left: 0;
   right: 0;
   animation: fixed 1s;
-  z-index: 555;
+  z-index: 15;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 @keyframes fixed {
-  0%{
+  0% {
     top: -20rem;
   }
-  100%{
+  100% {
     top: 0;
   }
 }
@@ -99,24 +99,24 @@
     background-color: #fff;
     z-index: 5;
 
-    box-shadow: 0.1rem 0.1rem .5rem rgba(0, 0, 0, 0.1);
+    box-shadow: 0.1rem 0.1rem 0.5rem rgba(0, 0, 0, 0.1);
 
     i {
       font-size: 3.3rem;
     }
 
-    .app__search-items{
+    .app__search-items {
       display: flex;
       justify-content: center;
 
-      .close-searchBar{
+      .close-searchBar {
         padding: 0;
         align-items: center;
         height: 5rem;
         cursor: pointer;
       }
 
-      .app__search-barIcon{
+      .app__search-barIcon {
         margin-top: 1rem;
         font-size: 2.3rem;
       }
@@ -142,9 +142,8 @@
       }
     }
 
-
     div {
-      padding: 5rem 0;      
+      padding: 5rem 0;
     }
   }
 
@@ -280,9 +279,11 @@
   width: 100%;
   height: 100vh;
   background-color: rgba(255, 255, 255, 0.7);
+  z-index: 20;
 }
 
 .app__menu-wrapper {
+  z-index: 100;
   li {
     list-style: none;
   }
@@ -304,6 +305,7 @@
     justify-content: end;
 
     .close-btn {
+      cursor: pointer;
       width: 4rem;
       height: 4rem;
       // background-color: rgba(0, 0, 0, 0.1);

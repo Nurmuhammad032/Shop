@@ -1,0 +1,205 @@
+.app__footer {
+  padding: 5rem 10rem;
+
+  background-color: var(--black-color);
+
+  .app__footer-logo {
+    padding: 0rem 0 4rem;
+    width: 20rem;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .app__footer-items {
+    display: flex;
+
+    .app__footer-item {
+      width: 24rem;
+      margin: 0 2rem;
+
+      .footer__links-header {
+        color: #fff;
+        letter-spacing: 0.2rem;
+        font-size: 1.3rem;
+        font-weight: 200;
+        text-transform: uppercase;
+        margin-bottom: 1.4rem;
+      }
+
+      a {
+        display: block;
+        color: #fff;
+        text-decoration: none;
+        margin: 0.4rem 0;
+        font-size: 1.2rem;
+        font-weight: 200;
+
+        text-transform: capitalize;
+      }
+    }
+
+    @media screen and (max-width: 992px) {
+      flex-wrap: wrap;
+
+      .app__footer-item {
+        &:nth-child(3) {
+          margin-top: 3rem;
+        }
+      }
+    }
+
+    @media screen and (max-width: 767px) {
+      display: none;
+    }
+  }
+
+  .copyright {
+    margin-top: 4rem;
+    text-align: center;
+
+    p {
+      color: #fff;
+      font-size: 1.4rem;
+      text-transform: capitalize;
+      font-weight: 300;
+    }
+  }
+  .sign-info {
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 200;
+    margin-bottom: 1.8rem;
+  }
+
+  .sign-input {
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    .emailIcon {
+      font-size: 3rem;
+      position: absolute;
+      right: 0;
+    }
+
+    .input-submit {
+      display: block;
+      border: none;
+      background-color: transparent;
+      color: #fff;
+      font-weight: 300 !important;
+      position: absolute;
+      right: 0;
+      cursor: pointer;
+    }
+
+    input {
+      padding-right: 4rem;
+      height: 3rem;
+      background-color: transparent;
+      color: #fff;
+      border: none;
+
+      width: 100%;
+
+      border-bottom: 2px solid #fff;
+
+      -webkit-font-smoothing: antialiased;
+      &::placeholder {
+        font-size: 1.4rem;
+        color: #fff;
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  .app__footer-social {
+    margin-top: 3rem;
+    > * {
+      color: #fff;
+      font-size: 3rem;
+      margin-right: 2rem;
+    }
+  }
+  .app__footer-accordionLinks {
+    font-size: 1.3rem;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    margin: 1rem 0;
+
+    font-weight: 200;
+    text-transform: capitalize;
+  }
+
+  @media screen and (max-width: 767px) {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
+  .res-phone {
+    max-width: 30rem;
+    margin: 0 auto;
+  }
+
+  .footer-responsive {
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
+  }
+
+
+  // Accordion customize css
+  .css-1elwnq4-MuiPaper-root-MuiAccordion-root {
+    background-color: transparent !important;
+    box-shadow: none !important;
+    border-top: 1px solid rgb(84, 84, 84);
+  }
+  .css-sh22l5-MuiButtonBase-root-MuiAccordionSummary-root {
+    width: 100% !important;
+    padding: 0px !important;
+  }
+  
+  .css-15v22id-MuiAccordionDetails-root {
+    padding: 0;
+  }
+  
+  .MuiAccordionSummary-content {
+    margin: 0;
+  }
+  .css-sh22l5-MuiButtonBase-root-MuiAccordionSummary-root.Mui-expanded {
+    min-height: 4.8rem !important;
+  }
+  
+  .Mui-expanded {
+    margin: 0 !important;
+  }
+  
+  .MuiSvgIcon-root {
+    color: #fff;
+  }
+  
+  .css-1elwnq4-MuiPaper-root-MuiAccordion-root:before {
+    display: none !important;
+  }
+  
+  .css-1elwnq4-MuiPaper-root-MuiAccordion-root.Mui-expanded:before {
+    opacity: 1;
+  }
+  
+  .css-1elwnq4-MuiPaper-root-MuiAccordion-root:before {
+    background-color: transparent;
+  }
+  .MuiAccordionSummary-expandIconWrapper {
+    position: relative;
+  }
+}
+
+
+
