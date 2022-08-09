@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 
 const CategoryComponent = ({ image, text }) => {
-  console.log(text);
+
   return (
     <a href="#" className="category-comp">
         <img className="category-img" src={image} alt="categoryImg" />

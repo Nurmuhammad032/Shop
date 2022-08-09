@@ -18,14 +18,23 @@ import {
   accessories,
   sale,
 } from "./LinkData";
+import { useDispatch, useSelector } from "react-redux";
 import LinkComponent from "./LinkComponent";
-
+import { setShowCart } from "../../store/cartSlice";
+import { selectCartItem } from "../../store/cartSlice";
+import { selectTotalProduct } from "../../store/cartSlice";
 import MenuAccordion from "./MenuAccordion";
 
 const Navbar = () => {
+  const dispatch = useDispatch();
   const [open, setOpen] = useState(false);
   const [openBar, setOpenBar] = useState(false);
   const [fixed, setFixed] = useState(false);
+  const totalProduct = useSelector(selectTotalProduct);
+
+  const showCart = (boolean) => {
+    dispatch(setShowCart(boolean));
+  };
 
   const handleScroll = () => {
     if (window.scrollY > 200) {
@@ -118,7 +127,12 @@ const Navbar = () => {
                     style={{ marginRight: "1.5rem" }}
                     onClick={() => setOpenBar(true)}
                   />
-                  <FaShoppingCart />
+                  <div
+                    style={{ display: "inline-block", position: "relative" }}
+                  >
+                    <FaShoppingCart onClick={() => showCart(true)} />
+                    <p className="totalProduct">{totalProduct}</p>
+                  </div>
                 </div>
               </li>
             </ul>

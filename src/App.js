@@ -1,5 +1,5 @@
 import React from "react";
-import { Footer, Navbar } from "./components/index";
+import { Footer, Navbar, CartItems } from "./components/index";
 import { Category, Infos, Landing, Products, Shop } from "./containers";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Shopping from "./components/Shopping/Shopping";
@@ -9,6 +9,7 @@ const App = () => {
   return (
     <Router>
       <Navbar />
+      <CartItems />
       <Routes>
         <Route
           path="/"
@@ -24,6 +25,7 @@ const App = () => {
         />
         <Route path="/shoes" element={<Shoes />} />
       </Routes>
+      
       <Footer />
     </Router>
   );

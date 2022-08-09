@@ -3,21 +3,38 @@ import "./Shoes.scss";
 import Shopping from "../../components/Shopping/Shopping";
 import { shoes } from "../../components/ShopData/ShopData";
 
+
+const colors = shoes[0].shoes1.description.productColor;
+const sizes = shoes[0].shoes1.description.productSize;
+const shoesItems = shoes[0].shoes1
+
 const Shoes = () => {
-  const [colorValue, setColorValue] = useState(10);
+  let firstAbledSize;
+  let fistAbledColor;
+
+  for (let i = 0; i < sizes.length; i++) {
+    if (!sizes[i].sold) {
+      firstAbledSize = sizes[i].size;
+      break;
+    }
+  }
+  for (let i = 0; i < colors.length; i++) {
+    if (!colors[i].sold) {
+      fistAbledColor = colors[i].productColorInfo;
+      break;
+    }
+  }
+
+  const [colorValue, setColorValue] = useState(fistAbledColor);
+  const [sizeValue, setSizeValue] = useState(firstAbledSize);
   return (
     <div>
       <Shopping
-        shoesImg={shoes[0].images}
-        heading={shoes[1].description.productName}
-        price={shoes[1].description.productPrice}
-        colorInfo={shoes[1].description.productColorInfo}
-        colorLength={shoes[1].description.productColor.length}
-        color={shoes[1].description.productColor}
-        select={setColorValue}
-        selected={colorValue}
-        sizesLength={shoes[1].description.productSize.length}
-        size={shoes[1].description.productSize}
+        items={shoesItems}
+        selectColor={setColorValue}
+        selectedColor={colorValue}
+        selectSize={setSizeValue}
+        selectedSize={Number(sizeValue)}
       />
     </div>
   );

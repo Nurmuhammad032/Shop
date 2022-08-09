@@ -88,6 +88,20 @@
   align-items: center;
   padding: 3rem 0;
 
+  .totalProduct{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -0rem;
+    right: -0.7rem;
+    background-color: orange;
+    width: 1.3rem;
+    height: 1.3rem;
+    font-size: 1rem;
+  }
+
   list-style: none;
 
   .app__search-bar {
