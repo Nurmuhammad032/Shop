@@ -2,7 +2,6 @@ import React from "react";
 import { Footer, Navbar, CartItems } from "./components/index";
 import { Category, Infos, Landing, Products, Shop } from "./containers";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Shopping from "./components/Shopping/Shopping";
 import Shoes from "./containers/Shoes/Shoes";
 
 const App = () => {

@@ -21,6 +21,26 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+body.lock-scroll {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.items-bg {
+  position: fixed;
+  background-color: rgba(255,255,255, 0.8);
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  max-width: 100%;
+  z-index: 40;
+  display: block;
+
+}
+
 .app__flex {
   display: flex;
   justify-content: center;

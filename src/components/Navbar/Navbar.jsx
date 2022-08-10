@@ -32,10 +32,19 @@ const Navbar = () => {
   const [fixed, setFixed] = useState(false);
   const totalProduct = useSelector(selectTotalProduct);
 
-  const showCart = (boolean) => {
-    dispatch(setShowCart(boolean));
+  const showCart = (cart) => {
+    dispatch(setShowCart(cart));
   };
 
+  function lockScroll() {
+    const body = document.querySelector("body");
+    if (openBar || open) {
+      body.classList.add("lock-scroll");
+    } else {
+      body.classList.remove("lock-scroll");
+    }
+  }
+  lockScroll()
   const handleScroll = () => {
     if (window.scrollY > 200) {
       setFixed(true);
@@ -80,7 +89,7 @@ const Navbar = () => {
               {openBar && (
                 <>
                   <span
-                    className="app__menu-back"
+                    className="items-bg"
                     onClick={() => setOpenBar(false)}
                   ></span>
                   <li className="app__search-bar">
@@ -173,10 +182,7 @@ const Navbar = () => {
 
       {open && (
         <>
-          <span
-            className="app__menu-back"
-            onClick={() => setOpen(false)}
-          ></span>
+          <span className="items-bg" onClick={() => setOpen(false)}></span>
           <motion.div
             whileInView={{ x: [-100, 0] }}
             className="app__menu-wrapper"

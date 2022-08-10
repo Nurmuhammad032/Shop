@@ -1,5 +1,11 @@
 .app__shopping {
   padding: 3rem 3rem;
+  margin: 0 auto;
+  width: 130rem;
+
+  @media screen and (max-width: 1320px){
+    width: 100%;
+  }
 
   .app__shopping-items {
     display: flex;
@@ -27,8 +33,12 @@
     }
 
     .app__shopping-images {
-      max-width: 50%;
+      max-width: 40%;
       // max-height: 50rem;
+
+      @media screen and (min-width: 1400px) {
+        width: 55rem;
+      }
     }
   }
 }

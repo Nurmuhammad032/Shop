@@ -4,6 +4,7 @@ const initialState = {
   itemList: [],
   imgUrl: null,
   totalQuantity: 0,
+  totalQuantityPrice: 0,
   showCart: false,
 };
 
@@ -39,7 +40,9 @@ const cartSlice = createSlice({
           color: newItem.color,
         });
       }
+      // const allPrice = exisitProduct.totalPrice += newItem.price;
       state.totalQuantity++;
+      state.totalQuantityPrice += newItem.price;
     },
     removeFromCart() {},
     setShowCart(state, action) {
@@ -54,5 +57,7 @@ export const { setShowCart } = cartSlice.actions;
 export const selectCartItem = (state) => state.cart.itemList;
 export const selectShowCart = (state) => state.cart.showCart;
 export const selectTotalProduct = (state) => state.cart.totalQuantity;
+export const selectTotalQuantityPrice = (state) =>
+  state.cart.totalQuantityPrice;
 
 export default cartSlice;

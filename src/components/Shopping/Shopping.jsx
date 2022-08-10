@@ -4,6 +4,7 @@ import "react-image-gallery/styles/css/image-gallery.css";
 import { useStickyBox } from "react-sticky-box";
 import { useDispatch } from "react-redux";
 import { cartActions } from "../../store/cartSlice";
+import { setShowCart } from "../../store/cartSlice";
 
 const Shopping = ({
   items,
@@ -14,7 +15,8 @@ const Shopping = ({
 }) => {
   // Dispatch
   const dispatch = useDispatch();
-  const addToCart = () => {
+  const addToCart = (cart) => {
+    dispatch(setShowCart(cart));
     dispatch(
       cartActions.addToCart({
         name: items.description.productName,
@@ -143,7 +145,7 @@ const Shopping = ({
               <p>{items.description.productReady[0]}</p>
             </div>
             <div className="app__shopping-addBtn">
-              <button onClick={addToCart}>add to cart</button>
+              <button onClick={() => addToCart(true)}>add to cart</button>
             </div>
             <div className="app__shopping-info">
               <p>{items.description.productInfo}</p>
