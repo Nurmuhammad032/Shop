@@ -5,6 +5,9 @@ import { useStickyBox } from "react-sticky-box";
 import { useDispatch } from "react-redux";
 import { cartActions } from "../../store/cartSlice";
 import { setShowCart } from "../../store/cartSlice";
+import { selectCartItem } from "../../store/cartSlice";
+import { useSelector } from "react-redux";
+import { useMediaPredicate } from "react-media-hook";
 
 const Shopping = ({
   items,
@@ -13,8 +16,10 @@ const Shopping = ({
   selectedSize,
   selectSize,
 }) => {
-  // Dispatch
+  const list = useSelector(selectCartItem)
+
   const dispatch = useDispatch();
+
   const addToCart = (cart) => {
     dispatch(setShowCart(cart));
     dispatch(
@@ -28,7 +33,6 @@ const Shopping = ({
       })
     );
   };
-
   // Product description sticky
   const stickyRef = useStickyBox({ offsetTop: 50, offsetBottom: 20 });
 
@@ -40,6 +44,8 @@ const Shopping = ({
   const handleSize = (e) => {
     selectSize(e.currentTarget.value);
   };
+
+  const responsiveMax768 = useMediaPredicate("(max-width: 768px)");
 
   return (
     <div className="app__shopping">
@@ -54,6 +60,8 @@ const Shopping = ({
               showFullscreenButton={false}
               showPlayButton={false}
               showNav={false}
+              showThumbnails={responsiveMax768 ? false : true}
+              showBullets={responsiveMax768 ? true : false}
               thumbnailPosition="bottom"
             />
           </div>

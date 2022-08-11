@@ -1,0 +1,23 @@
+.app__shop {
+  margin: 3rem 0;
+  display: flex;
+  justify-content: center;
+
+  background-color: #fff;
+  @media screen and (max-width: 767px) {
+    justify-content: initial;
+    padding: 0 0.1rem !important;
+    overflow: scroll;
+  }
+}
+
+.liking-products{
+  margin: 8rem 0 3rem;
+
+  .liking-product-header {
+    text-align: center;
+    font-size: 1.3rem;
+    letter-spacing: 0.1rem;
+    font-weight: 300;
+  }
+}

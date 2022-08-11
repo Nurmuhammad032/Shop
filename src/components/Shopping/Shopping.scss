@@ -40,7 +40,21 @@
         width: 55rem;
       }
     }
+
+    @media screen and (max-width: 768px) {
+      display: block;
+
+      .app__shopping-images{
+        max-width: 100%;
+
+
+      }
+    }
   }
+
+   @media screen and (max-width: 768px) {
+      padding: 0;
+    }
 }
 
 .app__shopping-description {
@@ -122,6 +136,13 @@
           color: #fff;
         }
       }
+
+      @media screen and (max-width: 768px) {
+        justify-content: center;
+      }
+    }
+    @media screen and (max-width: 768px) {
+
     }
   }
   .app__shopping-sizes {
@@ -172,6 +193,10 @@
           border: 1px solid #212121;
         }
       }
+
+      @media screen and (max-width: 768px) {
+        justify-content: center;
+      }
     }
   }
 
@@ -191,6 +216,10 @@
       color: #000;
       font-weight: 300;
       margin-left: 1.5rem;
+    }
+
+    @media screen and (max-width: 768px) {
+      justify-content: center; 
     }
   }
 
@@ -223,5 +252,15 @@
       font-size: 1.2rem;
       font-weight: 300;
     }
+
+    @media screen and (max-width: 768px) {
+     text-align: left; 
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    text-align: center;
+    margin: 1rem 0;
+    padding: 0 2rem;
   }
 }

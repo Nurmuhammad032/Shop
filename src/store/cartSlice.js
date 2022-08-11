@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { shoes } from "../components/ShopData/ShopData";
 
 const initialState = {
   itemList: [],
@@ -25,6 +26,15 @@ const cartSlice = createSlice({
         }
       });
 
+      // export const increment = {
+      //   incremen: function () {
+      //     if (exisitProduct) {
+      //       exisitProduct.quantity++;
+      //       exisitProduct.totalPrice += newItem.price;
+      //     }
+      //   },
+      // };
+
       if (exisitProduct) {
         exisitProduct.quantity++;
         exisitProduct.totalPrice += newItem.price;
@@ -44,7 +54,34 @@ const cartSlice = createSlice({
       state.totalQuantity++;
       state.totalQuantityPrice += newItem.price;
     },
-    removeFromCart() {},
+    incrementProduct(state, action) {
+      const inc = action.payload;
+
+      state.itemList.forEach((item, i) => {
+        if (i === inc) {
+          item.totalPrice += item.price;
+          item.quantity++;
+          state.totalQuantityPrice += item.price;
+          state.totalQuantity++;
+        }
+      });
+    },
+    removeFromCart(state, action) {
+      const inc = action.payload;
+
+      state.itemList.forEach((item, i) => {
+        if (i === inc) {
+          item.totalPrice -= item.price;
+          item.quantity--;
+          console.log(item.quantity);
+          state.totalQuantityPrice -= item.price;
+          state.totalQuantity--;
+          if (item.quantity < 1) {
+            state.itemList = state.itemList.filter((_, index) => index !== inc);
+          }
+        }
+      });
+    },
     setShowCart(state, action) {
       state.showCart = action.payload;
     },
@@ -52,7 +89,8 @@ const cartSlice = createSlice({
 });
 
 export const cartActions = cartSlice.actions;
-export const { setShowCart } = cartSlice.actions;
+export const { setShowCart, addToCart, incrementProduct, removeFromCart } =
+  cartSlice.actions;
 
 export const selectCartItem = (state) => state.cart.itemList;
 export const selectShowCart = (state) => state.cart.showCart;

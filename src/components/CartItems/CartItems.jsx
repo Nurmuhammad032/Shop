@@ -5,8 +5,10 @@ import { setShowCart } from "../../store/cartSlice";
 import { selectShowCart } from "../../store/cartSlice";
 import { useDispatch } from "react-redux";
 import { selectTotalQuantityPrice } from "../../store/cartSlice";
+import { incrementProduct } from "../../store/cartSlice";
+import { removeFromCart } from "../../store/cartSlice";
 
-const CartItems = () => {
+const CartItems = ({ items, selectedSize, selectedColor }) => {
   const dispatch = useDispatch();
   const showCart = useSelector(selectShowCart);
   const allPrice = useSelector(selectTotalQuantityPrice);
@@ -27,9 +29,18 @@ const CartItems = () => {
     dispatch(setShowCart(boolean));
   };
 
+  const increase = (index) => {
+    dispatch(incrementProduct(index));
+  };
+  const decrease = (index) => {
+    dispatch(removeFromCart(index));
+  };
+
   return (
     <>
-      {showCart && <div className="items-bg" onClick={() => hiddenCart(false)}></div>}
+      {showCart && (
+        <div className="items-bg" onClick={() => hiddenCart(false)}></div>
+      )}
       <div className={`app__cart ${showCart ? "showCart" : ""}`}>
         <div className="app__cart-header">
           <p>Cart</p>
@@ -59,8 +70,20 @@ const CartItems = () => {
                             </p>
                           </div>
                         </div>
-                        <div className="cart-price">
-                          <p>{`$ ${cart.price}`}</p>
+                        <div className="cart-price-wrapper">
+                          <div className="cart-addBtn">
+                            <button onClick={() => decrease(i)}>
+                              <i className="bi bi-dash"></i>
+                            </button>
+                            <span>{cart.quantity}</span>
+                            <button onClick={() => increase(i)}>
+                              <i className="bi bi-plus"></i>
+                            </button>
+                          </div>
+                          <div className="prices-wrap">
+                            <p>{`$ ${cart.price}`}</p>
+                            <p>{`Total: $ ${cart.totalPrice}`}</p>
+                          </div>
                         </div>
                       </div>
                     </div>

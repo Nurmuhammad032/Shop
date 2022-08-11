@@ -1,10 +1,12 @@
-const ProductComponent = ({ image, link }) => {
+import { Link } from "react-router-dom";
+
+const ProductComponent = ({ image, link, linkTo }) => {
   return (
     <div className="app__product-wrap">
       <img className="app__product-img" src={image} alt="productImg" />
-      <a className="app__product-link" href="#">
+      <Link to={`${linkTo}`} className="app__product-link">
         {link}
-      </a>
+      </Link>
     </div>
   );
 };

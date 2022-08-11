@@ -100,7 +100,7 @@ const Navbar = () => {
                         className="close-searchBar"
                         onClick={() => setOpenBar(false)}
                       >
-                        <i class="bi bi-x"></i>
+                        <i className="bi bi-x"></i>
                       </div>
                     </div>
                   </li>

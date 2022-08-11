@@ -57,7 +57,7 @@ export const shoes = [
       ],
       description: {
         productName: "paula star sneakers",
-        productPrice: 78.00,
+        productPrice: 78.0,
         // productColorInfo: "color - light grey",
         productColor: [
           {
@@ -86,6 +86,79 @@ export const shoes = [
         productInfo2: [
           "Faux Suede",
           "White Snakeskin Star On Side",
+          "Lace-Up",
+          "Rubber Sole",
+          "Runs TTS",
+        ],
+      },
+    },
+  },
+  {
+    shoes2: {
+      id: uuidv4(),
+      images: [
+        {
+          original: images.defaultImg2,
+          thumbnail: images.defaultImg2,
+        },
+        {
+          original: images.shoes2_2,
+          thumbnail: images.shoes2_2,
+        },
+        {
+          original: images.shoes2_3,
+          thumbnail: images.shoes2_3,
+        },
+        {
+          original: images.shoes2_3,
+          thumbnail: images.shoes2_3,
+        },
+        {
+          original: images.shoes2_4,
+          thumbnail: images.shoes2_4,
+        },
+        {
+          original: images.shoes2_5,
+          thumbnail: images.shoes2_5,
+        },
+        {
+          original: images.shoes2_6,
+          thumbnail: images.shoes2_6,
+        },
+        {
+          original: images.shoes2_7,
+          thumbnail: images.shoes2_7,
+        },
+      ],
+      description: {
+        productName: "Pamela star sneakers",
+        productPrice: 78.0,
+        // productColorInfo: "color - light grey",
+        productColor: [
+          {
+            color: "#fff",
+            sold: false,
+            productColorInfo: "white",
+          },
+        ],
+        productSize: [
+          { size: 5.5, sold: true },
+          { size: 6, sold: false },
+          { size: 7, sold: true },
+          { size: 7.5, sold: true },
+          { size: 8, sold: true },
+          { size: 8.5, sold: true },
+          { size: 9, sold: true },
+          { size: 10, sold: true },
+        ],
+        productReady: ["low stock - 1 item left", "orange"],
+        productInfo:
+          "Be the star that you are with the Pamela Star Sneakers! These trendy sneakers are designed with a white vegan leather with a black glitter detail on the back and a gold glitter star on the side. They have a rounded toe upper, a classic lace-up front, and a faux suede toe detail to finish off the look! Style the Pamela Star Sneakers with denim shorts and a graphic tee, or with a babydoll dress for a more girly look!",
+        productInfo2: [
+          "Vegan Leather",
+          "Black Glitter Detail on Back",
+          "Gold Glitter Star On Side",
+          "Faux Suede Rounded Toe",
           "Lace-Up",
           "Rubber Sole",
           "Runs TTS",

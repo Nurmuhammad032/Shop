@@ -1,18 +1,32 @@
 import ProductComponent from "./ProductComponent";
 import { images } from "../../constants";
 import "./Products.scss";
+import { Link } from "react-router-dom";
 
 const Products = () => {
   return (
     <>
+    <Link to='/shoes'>jgldskf</Link>
       <div className="app__product">
         <ProductComponent
           image={images.s3Img1}
           link={"Shop dresses + rompers"}
         />
-        <ProductComponent image={images.s3Img2} link={"shop summer tops"} />
-        <ProductComponent image={images.s3Img3} link={"summer looks"} />
-        <ProductComponent image={images.s3Img4} link={"new shoes"} />
+        <ProductComponent
+          image={images.s3Img2}
+          link={"shop summer tops"}
+          linkTo="/shoes"
+        />
+        <ProductComponent
+          image={images.s3Img3}
+          link={"summer looks"}
+          linkTo="/shoes"
+        />
+        <ProductComponent
+          image={images.s3Img4}
+          link={"new shoes"}
+          linkTo="/shoes"
+        />
       </div>
       <div className="app__product-info">
         <a href="#">
@@ -20,10 +34,26 @@ const Products = () => {
         </a>
       </div>
       <div className="app__product">
-        <ProductComponent image={images.s4Img1} link={"shop basics"} />
-        <ProductComponent image={images.s4Img2} link={"du exlusives"} />
-        <ProductComponent image={images.s4Img3} link={"shop accessories"} />
-        <ProductComponent image={images.s4Img4} link={"shop sunglasses"} />
+        <ProductComponent
+          image={images.s4Img1}
+          link={"shop basics"}
+          linkTo="/shoes"
+        />
+        <ProductComponent
+          image={images.s4Img2}
+          link={"du exlusives"}
+          linkTo="/shoes"
+        />
+        <ProductComponent
+          image={images.s4Img3}
+          link={"shop accessories"}
+          linkTo="/shoes"
+        />
+        <ProductComponent
+          image={images.s4Img4}
+          link={"shop sunglasses"}
+          linkTo="/shoes"
+        />
       </div>
       <div className="app__product-info">
         <a href="#">

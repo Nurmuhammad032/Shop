@@ -1,4 +1,5 @@
 import { useState } from "react";
+import './ShopComponent.scss'
 
 const ShopComponent = ({ image, hoverImg, info, price }) => {
   const [hover, setHover] = useState(false);
