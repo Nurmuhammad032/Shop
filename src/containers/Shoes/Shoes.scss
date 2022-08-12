@@ -11,7 +11,7 @@
   }
 }
 
-.liking-products{
+.liking-products {
   margin: 8rem 0 3rem;
 
   .liking-product-header {
@@ -19,5 +19,28 @@
     font-size: 1.3rem;
     letter-spacing: 0.1rem;
     font-weight: 300;
+  }
+}
+
+.service-container {
+  border-top: 2px solid #212121;
+  margin: 3rem 0;
+  padding: 5rem 0;
+  display: flex;
+  justify-content: center;
+
+  div {
+    max-width: 40rem;
+    margin: 0 1rem;
+
+    img {
+      width: 100%;
+    }
+    @media screen and (max-width: 768px) {
+      max-width: 100%;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    display: block;
   }
 }

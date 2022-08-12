@@ -44,17 +44,21 @@ import shoes2_5 from "../assets/shoes2-5.jpg";
 import shoes2_6 from "../assets/shoes2-6.jpg";
 import shoes2_7 from "../assets/shoes2-7.jpg";
 
-import imgView1 from "../assets/imgview-1.jpg";
-import imgView2 from "../assets/imgview-2.jpg";
-import imgView3 from "../assets/imgview-3.jpg";
-import imgView4 from "../assets/imgview-4.jpg";
-import imgView5 from "../assets/imgview-5.jpg";
+import imgView_1_1 from "../assets/imgview-1.jpg";
+import imgView_1_2 from "../assets/imgview-2.jpg";
+import imgView_1_3 from "../assets/imgview-3.jpg";
+import imgView_1_4 from "../assets/imgview-4.jpg";
+import imgView_1_5 from "../assets/imgview-5.jpg";
 
-import imgHover1 from "../assets/imghover-1.jpg";
-import imgHover2 from "../assets/imghover-2.jpg";
-import imgHover3 from "../assets/imghover-3.jpg";
-import imgHover4 from "../assets/imghover-4.jpg";
-import imgHover5 from "../assets/imghover-5.jpg";
+import imgHover_1_1 from "../assets/imghover-1.jpg";
+import imgHover_1_2 from "../assets/imghover-2.jpg";
+import imgHover_1_3 from "../assets/imghover-3.jpg";
+import imgHover_1_4 from "../assets/imghover-4.jpg";
+import imgHover_1_5 from "../assets/imghover-5.jpg";
+
+import location from "../assets/location-.jpg";
+import shipping from "../assets/shipping.jpg";
+import pickUp from "../assets/pickUp.jpg";
 
 export default {
   dressHover,
@@ -100,14 +104,17 @@ export default {
   shoes2_5,
   shoes2_6,
   shoes2_7,
-  imgView1,
-  imgView2,
-  imgView3,
-  imgView4,
-  imgView5,
-  imgHover1,
-  imgHover2,
-  imgHover3,
-  imgHover4,
-  imgHover5,
+  imgView_1_1,
+  imgView_1_2,
+  imgView_1_3,
+  imgView_1_4,
+  imgView_1_5,
+  imgHover_1_1,
+  imgHover_1_2,
+  imgHover_1_3,
+  imgHover_1_4,
+  imgHover_1_5,
+  location,
+  shipping,
+  pickUp,
 };

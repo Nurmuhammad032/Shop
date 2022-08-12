@@ -5,9 +5,8 @@ import { useStickyBox } from "react-sticky-box";
 import { useDispatch } from "react-redux";
 import { cartActions } from "../../store/cartSlice";
 import { setShowCart } from "../../store/cartSlice";
-import { selectCartItem } from "../../store/cartSlice";
-import { useSelector } from "react-redux";
 import { useMediaPredicate } from "react-media-hook";
+
 
 const Shopping = ({
   items,
@@ -16,7 +15,6 @@ const Shopping = ({
   selectedSize,
   selectSize,
 }) => {
-  const list = useSelector(selectCartItem)
 
   const dispatch = useDispatch();
 
@@ -45,6 +43,7 @@ const Shopping = ({
     selectSize(e.currentTarget.value);
   };
 
+  // Make responsive ImageGallery
   const responsiveMax768 = useMediaPredicate("(max-width: 768px)");
 
   return (
