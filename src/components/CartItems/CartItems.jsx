@@ -7,21 +7,21 @@ import { useDispatch } from "react-redux";
 import { selectTotalQuantityPrice } from "../../store/cartSlice";
 import { incrementProduct } from "../../store/cartSlice";
 import { removeFromCart } from "../../store/cartSlice";
+import { useEffect } from "react";
 
 const CartItems = ({ items, selectedSize, selectedColor }) => {
   const dispatch = useDispatch();
   const showCart = useSelector(selectShowCart);
   const allPrice = useSelector(selectTotalQuantityPrice);
 
-  function lockScroll() {
+  useEffect(()=> {
     const body = document.querySelector("body");
     if (showCart) {
       body.classList.add("lock-scroll");
     } else {
       body.classList.remove("lock-scroll");
     }
-  }
-  lockScroll();
+  }, [showCart])
 
   const cartItems = useSelector(selectCartItem);
 

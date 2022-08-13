@@ -25,7 +25,7 @@ const Products = () => {
         <ProductComponent
           image={images.s3Img4}
           link={"new shoes"}
-          linkTo="/shoes"
+          linkTo="/shoes-collections"
         />
       </div>
       <div className="app__product-info">

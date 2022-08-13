@@ -2,7 +2,7 @@
   width: 22%;
   height: auto;
   position: relative;
-  margin: 0 1.3rem;
+  margin-right: 3rem;
 
   .app__shop-img {
     width: 100%;
@@ -14,7 +14,7 @@
     }
     
 
-    a {
+    .app__shop-link {
       display: block;
       position: absolute;
       bottom: 0rem;
@@ -35,7 +35,7 @@
     }
 
     &:hover {
-      a {
+      .app__shop-link {
         bottom: 2rem;
         opacity: 1;
       }
@@ -67,6 +67,10 @@
       width: 100% !important;
       height: 100%;
     }
+  }
+
+  @media screen and (min-width: 1500px) {
+    width: 30rem;
   }
 }
 

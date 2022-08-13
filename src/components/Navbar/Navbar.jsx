@@ -1,5 +1,5 @@
 import "./Navbar.scss";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import {
   FaInstagram,
@@ -36,15 +36,15 @@ const Navbar = () => {
     dispatch(setShowCart(cart));
   };
 
-  function lockScroll() {
+  useEffect(()=> {
     const body = document.querySelector("body");
     if (openBar || open) {
       body.classList.add("lock-scroll");
     } else {
       body.classList.remove("lock-scroll");
     }
-  }
-  lockScroll()
+  }, [openBar, open])
+
   const handleScroll = () => {
     if (window.scrollY > 200) {
       setFixed(true);

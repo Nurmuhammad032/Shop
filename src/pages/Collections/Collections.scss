@@ -1,0 +1,46 @@
+.app__collections {
+  padding: 8rem 2rem;
+  max-width: 110rem;
+margin: 0 auto;
+
+  h1{
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .app__collections-sort {
+    width: inherit;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-size: 1.5rem;
+  }
+
+  .product-length {
+    margin-left: 0.2rem;
+    
+  }
+
+  .app__collections-infos {
+    margin-top: 2rem;
+    display: flex;
+  }
+}
+
+
+// Fix select component in mui 
+.css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input.MuiSelect-select{
+  font-size: 1.4rem;
+}
+
+#demo-simple-select-label{
+  font-size: 1.4rem;
+}
+.css-1in441m > span {
+  font-size: 12rem;
+}
+.css-kk1bwy-MuiButtonBase-root-MuiMenuItem-root {
+  font-size: 1.4rem !important;
+}

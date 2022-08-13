@@ -73,7 +73,6 @@ const cartSlice = createSlice({
         if (i === inc) {
           item.totalPrice -= item.price;
           item.quantity--;
-          console.log(item.quantity);
           state.totalQuantityPrice -= item.price;
           state.totalQuantity--;
           if (item.quantity < 1) {

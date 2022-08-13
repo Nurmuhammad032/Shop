@@ -1,7 +1,10 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import './ShopComponent.scss'
 
-const ShopComponent = ({ image, hoverImg, info, price }) => {
+const ShopComponent = ({ image, hoverImg, info, price, link }) => {
+  const navigate = useNavigate()
   const [hover, setHover] = useState(false);
 
   return (
@@ -15,7 +18,7 @@ const ShopComponent = ({ image, hoverImg, info, price }) => {
             src={hover ? hoverImg : image}
             alt="shopImg"
           />
-        <a href="#">Quick View</a>
+        <Link to={link} className="app__shop-link">Quick View</Link>
       </div>
       <div className="app__shop-price">
         <p>{info}</p>
