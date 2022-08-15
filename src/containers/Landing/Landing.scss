@@ -46,4 +46,48 @@
       }
     }
   }
+
+  .modal {
+    padding: 3rem 2rem 10rem 2rem;
+    border-radius: 0.5rem;
+    width: 50%;
+    height: 9rem;
+    background-color: #fff;
+    top: 10rem;
+    position: fixed;
+    top: 40%;
+    left: 25%;
+    z-index: 50;
+
+    box-shadow: 2rem 2rem 3rem rgba(0,0,0, 0.2);
+
+    .modal-close {
+      text-align: end;
+      cursor: pointer;
+      font-size: 1.7rem;
+    }
+
+    .modal-body {
+      text-align: center;
+       p {
+        font-size: 1.4rem;
+        text-transform: uppercase;
+        letter-spacing: 0.2rem;
+
+        span {
+          text-transform: capitalize;
+          color: red;
+          font-weight: bold;
+        }
+       }
+    }
+  }
+
+  .close-bg {
+    display: none;
+  }
+
+  .closeModal {
+    display: none;
+  }
 }
