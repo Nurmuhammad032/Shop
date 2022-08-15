@@ -1,12 +1,12 @@
-import { motion } from "framer-motion";
+import { Link } from "react-router-dom"
 
-const CategoryComponent = ({ image, text }) => {
+const CategoryComponent = ({ image, text, link }) => {
 
   return (
-    <a href="#" className="category-comp">
+    <Link to={link} className="category-comp">
         <img className="category-img" src={image} alt="categoryImg" />
         <p className="category-text">{text}</p>
-    </a>
+    </Link>
   );
 };
 

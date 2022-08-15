@@ -50,11 +50,9 @@ const Collections = ({ header, data }) => {
       setSorted(sortPriceZA);
     }
   };
-  // console.log(sorted.description.productPrice);
 
   return (
     <>
-      {/* {productId == data[0].collectionId && ( */}
         <div className="app__collections">
           <h1>{header}</h1>
           <div className="app__collections-sort">
@@ -90,7 +88,6 @@ const Collections = ({ header, data }) => {
             ))}
           </div>
         </div>
-      {/* // )} */}
     </>
   );
 };

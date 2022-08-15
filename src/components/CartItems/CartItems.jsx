@@ -8,8 +8,9 @@ import { selectTotalQuantityPrice } from "../../store/cartSlice";
 import { incrementProduct } from "../../store/cartSlice";
 import { removeFromCart } from "../../store/cartSlice";
 import { useEffect } from "react";
+import { motion } from "framer-motion";
 
-const CartItems = ({ items, selectedSize, selectedColor }) => {
+const CartItems = () => {
   const dispatch = useDispatch();
   const showCart = useSelector(selectShowCart);
   const allPrice = useSelector(selectTotalQuantityPrice);
@@ -53,7 +54,11 @@ const CartItems = ({ items, selectedSize, selectedColor }) => {
             <>
               <div className="cart-products">
                 {cartItems.map((cart, i) => (
-                  <div className="app__cartItems" key={i}>
+                  <motion.div
+                   className="app__cartItems" key={i}
+                   whileInView={{y: [25, 0], opacity: [0, 1]}}
+                   transition={{delay: (i % i) + 0.15}}
+                   >
                     <div className="app__cart-photo">
                       <img src={cart.imgUrl} alt="cartImg" />
                     </div>
@@ -87,7 +92,7 @@ const CartItems = ({ items, selectedSize, selectedColor }) => {
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </motion.div>
                 ))}
               </div>
               <div className="app__cart-footer">

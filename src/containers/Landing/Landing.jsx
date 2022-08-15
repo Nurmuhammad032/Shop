@@ -1,18 +1,19 @@
 import { images } from "../../constants";
+import { Link } from "react-router-dom";
 import "./Landing.scss";
 
 const Landing = () => {
   return (
     <div className="landing-wrapper">
       <div>
-        <a href="#">
+        <Link to='/dresses-collections'>
           <img className="landing" src={images.landing} alt="landingImg" />
           <img
             className="landingPhone"
             src={images.landingPhone}
             alt="landingImg"
           />
-        </a>
+        </Link>
       </div>
       <div className="landing-desc">
         <p>

@@ -99,6 +99,67 @@ import shoes8_9 from "../assets/shoes8-9.jpg";
 import shoes8_10 from "../assets/shoes8-10.jpg";
 import shoes8_11 from "../assets/shoes8-11.jpg";
 
+import dress1_1 from "../assets/dress1-1.jpg";
+import dress1_2 from "../assets/dress1-2.jpg";
+import dress1_3 from "../assets/dress1-3.jpg";
+import dress1_4 from "../assets/dress1-4.jpg";
+import dress1_5 from "../assets/dress1-5.jpg";
+import dress1_6 from "../assets/dress1-6.jpg";
+import dress1_7 from "../assets/dress1-7.jpg";
+import dress1_8 from "../assets/dress1-8.jpg";
+
+import dress2_1 from "../assets/dress2-1.jpg";
+import dress2_2 from "../assets/dress2-2.jpg";
+import dress2_3 from "../assets/dress2-3.jpg";
+import dress2_4 from "../assets/dress2-4.jpg";
+import dress2_5 from "../assets/dress2-5.jpg";
+import dress2_6 from "../assets/dress2-6.jpg";
+import dress2_7 from "../assets/dress2-7.jpg";
+
+import dress3_1 from "../assets/dress3-1.jpg";
+import dress3_2 from "../assets/dress3-2.jpg";
+import dress3_3 from "../assets/dress3-3.jpg";
+import dress3_4 from "../assets/dress3-4.jpg";
+import dress3_5 from "../assets/dress3-5.jpg";
+import dress3_6 from "../assets/dress3-6.jpg";
+import dress3_7 from "../assets/dress3-7.jpg";
+import dress3_8 from "../assets/dress3-8.jpg";
+import dress3_9 from "../assets/dress3-9.jpg";
+
+import dress4_1 from "../assets/dress4-1.jpg";
+import dress4_2 from "../assets/dress4-2.jpg";
+import dress4_3 from "../assets/dress4-3.jpg";
+import dress4_4 from "../assets/dress4-4.jpg";
+import dress4_5 from "../assets/dress4-5.jpg";
+import dress4_6 from "../assets/dress4-6.jpg";
+import dress4_7 from "../assets/dress4-7.jpg";
+
+import dress5_1 from "../assets/dress5-1.jpg";
+import dress5_2 from "../assets/dress5-2.jpg";
+import dress5_3 from "../assets/dress5-3.jpg";
+import dress5_4 from "../assets/dress5-4.jpg";
+import dress5_5 from "../assets/dress5-5.jpg";
+import dress5_6 from "../assets/dress5-6.jpg";
+
+import dress6_1 from "../assets/dress6-1.jpg";
+import dress6_2 from "../assets/dress6-2.jpg";
+import dress6_3 from "../assets/dress6-3.jpg";
+import dress6_4 from "../assets/dress6-4.jpg";
+import dress6_5 from "../assets/dress6-5.jpg";
+import dress6_6 from "../assets/dress6-6.jpg";
+import dress6_7 from "../assets/dress6-7.jpg";
+import dress6_8 from "../assets/dress6-8.jpg";
+import dress6_9 from "../assets/dress6-9.jpg";
+
+import dress7_1 from "../assets/dress7-1.jpg";
+import dress7_2 from "../assets/dress7-2.jpg";
+import dress7_3 from "../assets/dress7-3.jpg";
+import dress7_4 from "../assets/dress7-4.jpg";
+import dress7_5 from "../assets/dress7-5.jpg";
+import dress7_6 from "../assets/dress7-6.jpg";
+import dress7_7 from "../assets/dress7-7.jpg";
+import dress7_8 from "../assets/dress7-8.jpg";
+
 import imgView_1_1 from "../assets/imgview-1.jpg";
 import imgView_1_2 from "../assets/imgview-2.jpg";
 import imgView_1_3 from "../assets/imgview-3.jpg";
@@ -234,6 +295,67 @@ export default {
   shoes8_9,
   shoes8_10,
   shoes8_11,
+
+  dress1_1,
+  dress1_2,
+  dress1_3,
+  dress1_4,
+  dress1_5,
+  dress1_6,
+  dress1_7,
+  dress1_8,
+
+  dress2_1,
+  dress2_2,
+  dress2_3,
+  dress2_4,
+  dress2_5,
+  dress2_6,
+  dress2_7,
+
+  dress3_1,
+  dress3_2,
+  dress3_3,
+  dress3_4,
+  dress3_5,
+  dress3_6,
+  dress3_7,
+  dress3_8,
+  dress3_9,
+
+  dress4_1,
+  dress4_2,
+  dress4_3,
+  dress4_4,
+  dress4_5,
+  dress4_6,
+  dress4_7,
+
+  dress5_1,
+  dress5_2,
+  dress5_3,
+  dress5_4,
+  dress5_5,
+  dress5_6,
+
+  dress6_1,
+  dress6_2,
+  dress6_3,
+  dress6_4,
+  dress6_5,
+  dress6_6,
+  dress6_7,
+  dress6_8,
+  dress6_9,
+
+  dress7_1,
+  dress7_2,
+  dress7_3,
+  dress7_4,
+  dress7_5,
+  dress7_6,
+  dress7_7,
+  dress7_8,
 
   imgView_1_1,
   imgView_1_2,

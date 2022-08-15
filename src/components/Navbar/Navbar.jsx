@@ -20,8 +20,8 @@ import {
 } from "./LinkData";
 import { useDispatch, useSelector } from "react-redux";
 import LinkComponent from "./LinkComponent";
+import { Link } from "react-router-dom";
 import { setShowCart } from "../../store/cartSlice";
-import { selectCartItem } from "../../store/cartSlice";
 import { selectTotalProduct } from "../../store/cartSlice";
 import MenuAccordion from "./MenuAccordion";
 
@@ -36,14 +36,14 @@ const Navbar = () => {
     dispatch(setShowCart(cart));
   };
 
-  useEffect(()=> {
+  useEffect(() => {
     const body = document.querySelector("body");
     if (openBar || open) {
       body.classList.add("lock-scroll");
     } else {
       body.classList.remove("lock-scroll");
     }
-  }, [openBar, open])
+  }, [openBar, open]);
 
   const handleScroll = () => {
     if (window.scrollY > 200) {
@@ -118,12 +118,14 @@ const Navbar = () => {
                 </div>
               </li>
               <li>
-                <img
-                  src="//cdn.shopify.com/s/files/1/0339/0901/files/Peach-Black-DU-Logo_160x.png?v=1631144136"
-                  srcSet="//cdn.shopify.com/s/files/1/0339/0901/files/Peach-Black-DU-Logo_160x.png?v=1631144136 1x, //cdn.shopify.com/s/files/1/0339/0901/files/Peach-Black-DU-Logo_160x@2x.png?v=1631144136 2x"
-                  alt="Dress Up"
-                  itemProp="logo"
-                />
+                <Link to="/">
+                  <img
+                    src="//cdn.shopify.com/s/files/1/0339/0901/files/Peach-Black-DU-Logo_160x.png?v=1631144136"
+                    srcSet="//cdn.shopify.com/s/files/1/0339/0901/files/Peach-Black-DU-Logo_160x.png?v=1631144136 1x, //cdn.shopify.com/s/files/1/0339/0901/files/Peach-Black-DU-Logo_160x@2x.png?v=1631144136 2x"
+                    alt="Dress Up"
+                    itemProp="logo"
+                  />
+                </Link>
               </li>
               <li>
                 <div>
@@ -148,31 +150,45 @@ const Navbar = () => {
 
             <ul className="app__navbar-links">
               <li>
-                <a href="">du exclusive</a>
+                <a href="" className="links-wrapp">
+                  du exclusive
+                </a>
                 <LinkComponent links={exclusive} />
               </li>
               <li>
-                <a href="">New arrivals</a>
+                <a href="" className="links-wrapp">
+                  New arrivals
+                </a>
                 <LinkComponent links={newArrivals} />
               </li>
               <li>
-                <a href="">clothing</a>
+                <a href="" className="links-wrapp">
+                  clothing
+                </a>
                 <LinkComponent links={clothing} />
               </li>
               <li>
-                <a href="">dresses</a>
+                <a href="" className="links-wrapp">
+                  dresses
+                </a>
                 <LinkComponent links={dresses} />
               </li>
               <li>
-                <a href="">shoes</a>
+                <a href="" className="links-wrapp">
+                  shoes
+                </a>
                 <LinkComponent links={shoes} />
               </li>
               <li>
-                <a href="">accessories</a>
+                <a href="" className="links-wrapp">
+                  accessories
+                </a>
                 <LinkComponent links={accessories} />
               </li>
               <li>
-                <a href="">sale</a>
+                <a href="" className="links-wrapp">
+                  sale
+                </a>
                 <LinkComponent links={sale} />
               </li>
             </ul>
@@ -180,13 +196,10 @@ const Navbar = () => {
         </div>
       </div>
 
-      {open && (
+      {/* {open && ( */}
         <>
-          <span className="items-bg" onClick={() => setOpen(false)}></span>
-          <motion.div
-            whileInView={{ x: [-100, 0] }}
-            className="app__menu-wrapper"
-          >
+         {open && <span className="items-bg" onClick={() => setOpen(false)}></span> }
+          <section className={`app__menu-wrapper ${open ? 'open__menu' : ''}`}>
             <div className="close__btn-wrapper">
               <div className="close-btn" onClick={() => setOpen(false)}>
                 <div></div>
@@ -194,13 +207,13 @@ const Navbar = () => {
               </div>
             </div>
             <div>
-              <ul>
-                <motion.li
-                  whileInView={{ y: [10, 0] }}
-                  className="collapse-header"
-                >
+              <motion.ul
+                whileInView={{ y: [50, 0], opacity: [0, 1] }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+              >
+                <li className="collapse-header">
                   <MenuAccordion />
-                </motion.li>
+                </li>
                 <li className="login-link">
                   <a href="#">Login</a>
                 </li>
@@ -215,11 +228,11 @@ const Navbar = () => {
                     <FaPinterest />
                   </a>
                 </li>
-              </ul>
+              </motion.ul>
             </div>
-          </motion.div>
+          </section>
         </>
-      )}
+      {/* // )} */}
     </>
   );
 };

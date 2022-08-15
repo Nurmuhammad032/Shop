@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import "./Navbar.scss";
 
 const LinkComponent = ({ links }) => {
@@ -17,7 +18,9 @@ const LinkComponent = ({ links }) => {
             <ul>
               <li>{link.heading}</li>
               {link.link.map((aTag, i) => (
-                <li key={i}>{aTag}</li>
+                <Link to="/" key={i}>
+                  {aTag}
+                </Link>
               ))}
             </ul>
           </motion.div>

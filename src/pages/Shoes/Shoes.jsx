@@ -11,16 +11,11 @@ const Shoes = ({ data }) => {
   let sizes;
   const findUrl = data.filter((shoes) => {
     if (shoes.id === id) {
-      console.log(shoes.id);
-      console.log(id);
       colors = shoes.description.productColor;
       sizes = shoes.description.productSize;
-      // console.log(colors);
-      // console.log(sizes);
       return true;
     }
   });
-  // const shoesItems = shoes[0];
 
   let firstAbledSize;
   let firstAbledColor;
@@ -48,8 +43,6 @@ const Shoes = ({ data }) => {
     setSizeValue(firstAbledSize);
   }, [firstAbledColor, firstAbledSize]);
 
-  console.log(colorValue);
-  console.log(sizeValue);
   return (
     <>
       {findUrl &&
