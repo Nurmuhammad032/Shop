@@ -1,0 +1,45 @@
+.app__notfound {
+  
+  .app__notfound-info {
+    padding: 10rem 0;
+    width: 100%;
+    text-align: center;
+
+    h1{
+      font-weight: 400;
+      font-size: 1.9rem;
+      letter-spacing: 0.2rem;
+    }
+    p {
+      margin: 0.6rem 0;
+      font-weight: 300;
+      font-size: 1.2rem;
+    }
+
+    .app__notfound-link {
+      position: relative;
+      text-transform: capitalize;
+      font-weight: 300;
+      color: #000;
+      text-decoration: none;
+      font-size: 1.2rem;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: -0.2rem;
+        width: 0%;
+        height: 2px;
+        background-color: #000 !important;
+        transition: 0.3s;
+      }
+
+      &:hover::before {
+        width: 100%;
+      }
+    }
+  }
+
+
+}
