@@ -25,23 +25,22 @@
     }
   }
 
-  .landing-desc{
+  .landing-desc {
     margin: 0;
-    padding:0;
+    padding: 0;
     background-color: var(--color-announ-bright);
     padding: 1rem;
-
 
     p {
       text-align: center;
       color: #000;
       letter-spacing: 0.2rem;
       font-size: 1.4rem;
-  
+
       span {
         font-weight: 200;
         font-size: 1rem;
-  
+
         letter-spacing: normal;
       }
     }
@@ -59,7 +58,7 @@
     left: 25%;
     z-index: 50;
 
-    box-shadow: 2rem 2rem 3rem rgba(0,0,0, 0.2);
+    box-shadow: 2rem 2rem 3rem rgba(0, 0, 0, 0.2);
 
     .modal-close {
       text-align: end;
@@ -69,7 +68,7 @@
 
     .modal-body {
       text-align: center;
-       p {
+      p {
         font-size: 1.4rem;
         text-transform: uppercase;
         letter-spacing: 0.2rem;
@@ -79,15 +78,31 @@
           color: red;
           font-weight: bold;
         }
-       }
+      }
     }
   }
 
   .close-bg {
     display: none;
+    visibility: hidden;
   }
 
   .closeModal {
+    visibility: hidden;
     display: none;
+  }
+
+  .items-bg {
+    opacity: 0;
+    animation: fade 0.4s linear both;
+  }
+
+  @keyframes fade {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
   }
 }

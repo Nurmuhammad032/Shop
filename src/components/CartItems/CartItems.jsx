@@ -106,9 +106,9 @@ const CartItems = () => {
                   </p>
                 </div>
                 <div>
-                  <a href="" className="link-toCart">
+                  <p  className="link-toCart">
                     cart
-                  </a>
+                  </p>
                 </div>
               </div>
             </>

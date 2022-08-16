@@ -7,7 +7,6 @@ import { cartActions } from "../../store/cartSlice";
 import { setShowCart } from "../../store/cartSlice";
 import { useMediaPredicate } from "react-media-hook";
 
-
 const Shopping = ({
   items,
   selectColor,
@@ -15,7 +14,6 @@ const Shopping = ({
   selectedSize,
   selectSize,
 }) => {
-
   const dispatch = useDispatch();
 
   const addToCart = (cart) => {
@@ -70,7 +68,9 @@ const Shopping = ({
               <p>{`$ ${items.description.productPrice}`}</p>
             </div>
             <div className="app__shopping-colors">
-              <p>{`Color - ${selectedColor}`}</p>
+              <p>
+                Color: <span>- {selectedColor}</span>
+              </p>
               <ul className="color">
                 {Array.from(
                   { length: items.description.productColor.length },
