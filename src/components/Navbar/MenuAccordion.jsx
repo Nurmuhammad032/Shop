@@ -14,6 +14,7 @@ import {
   accessories,
   sale,
 } from "./LinkData";
+import { Link } from "react-router-dom";
 
 const MenuAccordion = () => {
   return (
@@ -24,9 +25,9 @@ const MenuAccordion = () => {
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
-          <a href="#" className="app__menu-heading">
+          <Link to="" className="app__menu-heading">
             Du Exclusive
-          </a>
+          </Link>
         </AccordionSummary>
         <AccordionDetails>
           <Menu links={exclusive} />
@@ -38,9 +39,9 @@ const MenuAccordion = () => {
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
-          <a href="#" className="app__menu-heading">
+          <Link to="" className="app__menu-heading">
             New arrivals
-          </a>
+          </Link>
         </AccordionSummary>
         <AccordionDetails>
           <Menu links={newArrivals} />
@@ -52,9 +53,9 @@ const MenuAccordion = () => {
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
-          <a href="#" className="app__menu-heading">
+          <Link to="" className="app__menu-heading">
             Clothing
-          </a>
+          </Link>
         </AccordionSummary>
         <AccordionDetails>
           <Menu links={clothing} />
@@ -66,9 +67,9 @@ const MenuAccordion = () => {
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
-          <a href="#" className="app__menu-heading">
+          <Link to="" className="app__menu-heading">
             Dresses
-          </a>
+          </Link>
         </AccordionSummary>
         <AccordionDetails>
           <Menu links={dresses} />
@@ -80,9 +81,9 @@ const MenuAccordion = () => {
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
-          <a href="#" className="app__menu-heading">
+          <Link to="" className="app__menu-heading">
             Shoes
-          </a>
+          </Link>
         </AccordionSummary>
         <AccordionDetails>
           <Menu links={shoes} />
@@ -94,9 +95,9 @@ const MenuAccordion = () => {
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
-          <a href="#" className="app__menu-heading">
+          <Link to="" className="app__menu-heading">
             Accessories
-          </a>
+          </Link>
         </AccordionSummary>
         <AccordionDetails>
           <Menu links={accessories} />
@@ -108,9 +109,9 @@ const MenuAccordion = () => {
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
-          <a href="#" className="app__menu-heading">
+          <Link to="" className="app__menu-heading">
             Sale
-          </a>
+          </Link>
         </AccordionSummary>
         <AccordionDetails>
           <Menu links={sale} />

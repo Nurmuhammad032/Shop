@@ -29,7 +29,7 @@ body.lock-scroll {
 
 .items-bg {
   position: fixed;
-  background-color: rgba(255,255,255, 0.8);
+  background-color: rgba(255, 255, 255, 0.8);
   top: 0;
   left: 0;
   bottom: 0;
@@ -38,7 +38,6 @@ body.lock-scroll {
   max-width: 100%;
   z-index: 40;
   display: block;
-
 }
 
 .app__flex {
@@ -56,7 +55,6 @@ body.lock-scroll {
   padding: 0.5rem 1.3rem;
   background-color: transparent;
   font-weight: 300;
-  /* letter-spacing: ; */
   border-radius: 0.3rem;
   border: 1px solid var(--color-announcement);
 }
@@ -90,4 +88,77 @@ body.lock-scroll {
   font-weight: 500;
   text-transform: capitalize;
   border-bottom: 1px solid rgb(238, 124, 11);
+}
+
+/* Accordion customize css */
+.css-1elwnq4-MuiPaper-root-MuiAccordion-root {
+  background-color: transparent;
+  box-shadow: none;
+}
+.css-sh22l5-MuiButtonBase-root-MuiAccordionSummary-root {
+  width: 100% !important;
+  padding: 0px !important;
+}
+
+.css-15v22id-MuiAccordionDetails-root {
+  padding: 0;
+}
+
+.MuiAccordionSummary-content {
+  margin: 0;
+}
+.css-sh22l5-MuiButtonBase-root-MuiAccordionSummary-root.Mui-expanded {
+  min-height: 4.8rem;
+}
+
+.Mui-expanded {
+  margin: 0;
+}
+
+.css-1elwnq4-MuiPaper-root-MuiAccordion-root.Mui-expanded:before {
+  opacity: 1;
+}
+
+.css-1elwnq4-MuiPaper-root-MuiAccordion-root:before {
+  background-color: #fafafa;
+}
+.MuiAccordionSummary-expandIconWrapper {
+  position: relative;
+}
+
+.MuiAccordionSummary-expandIconWrapper::before {
+  content: "";
+  position: absolute;
+  left: -1rem;
+  z-index: 50;
+  top: 50%;
+  transform: translateY(-50%);
+
+  background-color: #fafafa;
+  width: 0.1rem;
+  height: 2rem;
+}
+
+.MuiAccordionSummary-expandIconWrapper:hover {
+  background-color: #fafafa;
+}
+/*  Accordion customize css End */
+
+
+
+/* Fix select component in mui */
+.css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input.MuiSelect-select {
+  font-size: 1.4rem;
+}
+
+#demo-simple-select-label {
+  font-size: 1.9rem;
+}
+
+.css-1in441m > span {
+  font-size: 12rem;
+}
+
+.css-kk1bwy-MuiButtonBase-root-MuiMenuItem-root {
+  font-size: 1.5rem !important;
 }

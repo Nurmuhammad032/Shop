@@ -4,6 +4,8 @@ import { Accordion } from "@mui/material";
 import { AccordionSummary } from "@mui/material";
 import { AccordionDetails } from "@mui/material";
 import ExpandMore from "@mui/icons-material/ExpandMore";
+import { Link } from "react-router-dom";
+
 const Menu = ({ links }) => {
   return (
     <section className="app__menu">
@@ -21,7 +23,7 @@ const Menu = ({ links }) => {
                   arial-controls="panel1a-content"
                   id="panel1a-header"
                 >
-                  <a href="#">{link.heading}</a>
+                  <Link to="">{link.heading}</Link>
                 </AccordionSummary>
                 <AccordionDetails>
                   {link.link.map((aTag, index) => (

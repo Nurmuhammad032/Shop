@@ -1,6 +1,7 @@
+import "./Products.scss";
 import ProductComponent from "./ProductComponent"
 import { images } from "../../constants";
-import "./Products.scss";
+import { Link } from "react-router-dom";
 
 const Products = () => {
   return (
@@ -31,9 +32,9 @@ const Products = () => {
         />
       </div>
       <div className="app__product-info">
-        <a href="#">
+        <Link to="">
           shop new collection 2-3x weekly <span>shop our latest release</span>
-        </a>
+        </Link>
       </div>
       <div className="app__product">
         <ProductComponent
@@ -62,9 +63,9 @@ const Products = () => {
         />
       </div>
       <div className="app__product-info">
-        <a href="#">
+        <Link to="">
           BUY HER A GIFT CARD <span>shop gift cards</span>
-        </a>
+        </Link>
       </div>
     </>
   );

@@ -64,15 +64,15 @@ const Navbar = () => {
             <span> select “store pick up” at checkout + pick up same day!</span>
           </p>
           <div className="app__navbar-social">
-            <a href="#">
+            <Link to="">
               <FaInstagram />
-            </a>
-            <a href="">
+            </Link>
+            <Link to="">
               <FaFacebook />
-            </a>
-            <a href="">
+            </Link>
+            <Link to="">
               <FaPinterest />
-            </a>
+            </Link>
           </div>
         </div>
 
@@ -150,45 +150,45 @@ const Navbar = () => {
 
             <ul className="app__navbar-links">
               <li>
-                <a href="" className="links-wrapp">
+                <Link to="" className="links-wrapp">
                   du exclusive
-                </a>
+                </Link>
                 <LinkComponent links={exclusive} />
               </li>
               <li>
-                <a href="" className="links-wrapp">
+                <Link to="" className="links-wrapp">
                   New arrivals
-                </a>
+                </Link>
                 <LinkComponent links={newArrivals} />
               </li>
               <li>
-                <a href="" className="links-wrapp">
+                <Link to="" className="links-wrapp">
                   clothing
-                </a>
+                </Link>
                 <LinkComponent links={clothing} />
               </li>
               <li>
-                <a href="" className="links-wrapp">
+                <Link to="" className="links-wrapp">
                   dresses
-                </a>
+                </Link>
                 <LinkComponent links={dresses} />
               </li>
               <li>
-                <a href="" className="links-wrapp">
+                <Link to="" className="links-wrapp">
                   shoes
-                </a>
+                </Link>
                 <LinkComponent links={shoes} />
               </li>
               <li>
-                <a href="" className="links-wrapp">
+                <Link to="" className="links-wrapp">
                   accessories
-                </a>
+                </Link>
                 <LinkComponent links={accessories} />
               </li>
               <li>
-                <a href="" className="links-wrapp">
+                <Link to="" className="links-wrapp">
                   sale
-                </a>
+                </Link>
                 <LinkComponent links={sale} />
               </li>
             </ul>
@@ -197,42 +197,43 @@ const Navbar = () => {
       </div>
 
       {/* {open && ( */}
-        <>
-         {open && <span className="items-bg" onClick={() => setOpen(false)}></span> }
-          <section className={`app__menu-wrapper ${open ? 'open__menu' : ''}`}>
-            <div className="close__btn-wrapper">
-              <div className="close-btn" onClick={() => setOpen(false)}>
-                <div></div>
-                <div></div>
-              </div>
+      <>
+        {open && (
+          <span className="items-bg" onClick={() => setOpen(false)}></span>
+        )}
+        <section className={`app__menu-wrapper ${open ? "open__menu" : ""}`}>
+          <div className="close__btn-wrapper">
+            <div className="close-btn" onClick={() => setOpen(false)}>
+              <div></div>
+              <div></div>
             </div>
-            <div>
-              <motion.ul
-                whileInView={{ y: [50, 0], opacity: [0, 1] }}
-                transition={{ duration: 0.6, delay: 0.4 }}
-              >
-                <li className="collapse-header">
-                  <MenuAccordion />
-                </li>
-                <li className="login-link">
-                  <a href="#">Login</a>
-                </li>
-                <li className="menu-social">
-                  <a href="#">
-                    <FaInstagram />
-                  </a>
-                  <a href="">
-                    <FaFacebook />
-                  </a>
-                  <a href="">
-                    <FaPinterest />
-                  </a>
-                </li>
-              </motion.ul>
-            </div>
-          </section>
-        </>
-      {/* // )} */}
+          </div>
+          <div>
+            <motion.ul
+              whileInView={{ y: [50, 0], opacity: [0, 1] }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+            >
+              <li className="collapse-header">
+                <MenuAccordion />
+              </li>
+              <li className="login-link">
+                <Link to="">Login</Link>
+              </li>
+              <li className="menu-social">
+                <Link to="">
+                  <FaInstagram />
+                </Link>
+                <Link to="">
+                  <FaFacebook />
+                </Link>
+                <Link to="">
+                  <FaPinterest />
+                </Link>
+              </li>
+            </motion.ul>
+          </div>
+        </section>
+      </>
     </>
   );
 };

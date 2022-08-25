@@ -1,5 +1,4 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { shoes } from "../components/ShopData/ShopData";
 
 const initialState = {
   itemList: [],
@@ -25,15 +24,6 @@ const cartSlice = createSlice({
           return true;
         }
       });
-
-      // export const increment = {
-      //   incremen: function () {
-      //     if (exisitProduct) {
-      //       exisitProduct.quantity++;
-      //       exisitProduct.totalPrice += newItem.price;
-      //     }
-      //   },
-      // };
 
       if (exisitProduct) {
         exisitProduct.quantity++;

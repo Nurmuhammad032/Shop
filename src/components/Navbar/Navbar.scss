@@ -356,60 +356,6 @@
       text-decoration: none;
     }
 
-    // Accordion customize css
-    .css-1elwnq4-MuiPaper-root-MuiAccordion-root {
-      background-color: transparent;
-      box-shadow: none;
-    }
-    .css-sh22l5-MuiButtonBase-root-MuiAccordionSummary-root {
-      width: 100% !important;
-      padding: 0px !important;
-    }
-
-    .css-15v22id-MuiAccordionDetails-root {
-      padding: 0;
-    }
-
-    .MuiAccordionSummary-content {
-      margin: 0;
-    }
-    .css-sh22l5-MuiButtonBase-root-MuiAccordionSummary-root.Mui-expanded {
-      min-height: 4.8rem;
-    }
-
-    .Mui-expanded {
-      margin: 0;
-    }
-
-    .css-1elwnq4-MuiPaper-root-MuiAccordion-root.Mui-expanded:before {
-      opacity: 1;
-    }
-
-    .css-1elwnq4-MuiPaper-root-MuiAccordion-root:before {
-      background-color: #fafafa;
-    }
-    .MuiAccordionSummary-expandIconWrapper {
-      position: relative;
-
-      &::before {
-        content: "";
-        position: absolute;
-        left: -1rem;
-        z-index: 50;
-        top: 50%;
-        transform: translateY(-50%);
-
-        background-color: #fafafa;
-        width: 0.1rem;
-        height: 2rem;
-      }
-
-      &:hover {
-        background-color: #fafafa;
-      }
-    }
-    // Accordion customize css End
-
     .visible__links-header {
       a {
         font-size: 1.2rem;
@@ -444,7 +390,6 @@
   }
 
   .login-link {
-    // margin: 1rem 0;
     height: 4.8rem;
     display: flex;
     align-items: center;
