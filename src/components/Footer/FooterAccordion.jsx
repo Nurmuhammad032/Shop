@@ -5,6 +5,7 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { FaInstagram, FaFacebook, FaPinterest } from "react-icons/fa";
 import { AiOutlineMail } from "react-icons/ai";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const quickLinks = [
   "shipping + returns",
@@ -57,9 +58,9 @@ const FooterAccordion = () => {
         </AccordionSummary>
         <AccordionDetails>
           {quickLinks.map((link, i) => (
-            <a key={i} href="#" className="app__footer-accordionLinks">
+            <Link key={i} to="" className="app__footer-accordionLinks">
               {link}
-            </a>
+            </Link>
           ))}
         </AccordionDetails>
       </Accordion>
@@ -86,9 +87,9 @@ const FooterAccordion = () => {
         </AccordionSummary>
         <AccordionDetails>
           {aboutUs.map((link, i) => (
-            <a key={i} href="#" className="app__footer-accordionLinks">
+            <Link key={i} to="" className="app__footer-accordionLinks">
               {link}
-            </a>
+            </Link>
           ))}
         </AccordionDetails>
       </Accordion>

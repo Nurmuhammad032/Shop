@@ -15,14 +15,14 @@ const CartItems = () => {
   const showCart = useSelector(selectShowCart);
   const allPrice = useSelector(selectTotalQuantityPrice);
 
-  useEffect(()=> {
+  useEffect(() => {
     const body = document.querySelector("body");
     if (showCart) {
       body.classList.add("lock-scroll");
     } else {
       body.classList.remove("lock-scroll");
     }
-  }, [showCart])
+  }, [showCart]);
 
   const cartItems = useSelector(selectCartItem);
 
@@ -55,10 +55,11 @@ const CartItems = () => {
               <div className="cart-products">
                 {cartItems.map((cart, i) => (
                   <motion.div
-                   className="app__cartItems" key={i}
-                   whileInView={{y: [25, 0], opacity: [0, 1]}}
-                   transition={{delay: (i % i) + 0.15}}
-                   >
+                    className="app__cartItems"
+                    key={i}
+                    whileInView={{ y: [25, 0], opacity: [0, 1] }}
+                    transition={{ delay: (i % i) + 0.15 }}
+                  >
                     <div className="app__cart-photo">
                       <img src={cart.imgUrl} alt="cartImg" />
                     </div>
@@ -106,9 +107,7 @@ const CartItems = () => {
                   </p>
                 </div>
                 <div>
-                  <p  className="link-toCart">
-                    cart
-                  </p>
+                  <p className="link-toCart">cart</p>
                 </div>
               </div>
             </>
