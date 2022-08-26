@@ -4,7 +4,6 @@ import { Accordion } from "@mui/material";
 import { AccordionDetails } from "@mui/material";
 import { AccordionSummary } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-
 import {
   exclusive,
   newArrivals,
@@ -15,12 +14,18 @@ import {
   sale,
 } from "./LinkData";
 import { Link } from "react-router-dom";
+import { accordionStyles, accordionSummeryStyles } from "../AccordionStyles";
 
 const MenuAccordion = () => {
   return (
     <>
-      <Accordion>
+      <Accordion
+      sx={{...accordionStyles, 
+         borderBottom: '1px solid #ede3e3'
+      }}
+      >
         <AccordionSummary
+         sx={{...accordionSummeryStyles}}
           expandIcon={<ExpandMoreIcon sx={{ fontSize: "2.3rem" }} />}
           aria-controls="panel1a-content"
           id="panel1a-header"
@@ -33,8 +38,13 @@ const MenuAccordion = () => {
           <Menu links={exclusive} />
         </AccordionDetails>
       </Accordion>
-      <Accordion>
+      <Accordion
+      sx={{...accordionStyles, 
+       borderBottom: '1px solid #ede3e3'
+      }}
+      >
         <AccordionSummary
+         sx={{...accordionSummeryStyles}}
           expandIcon={<ExpandMoreIcon sx={{ fontSize: "2.3rem" }} />}
           aria-controls="panel1a-content"
           id="panel1a-header"
@@ -47,8 +57,13 @@ const MenuAccordion = () => {
           <Menu links={newArrivals} />
         </AccordionDetails>
       </Accordion>
-      <Accordion>
+      <Accordion
+      sx={{...accordionStyles, 
+       borderBottom: '1px solid #ede3e3'
+      }}
+      >
         <AccordionSummary
+         sx={{...accordionSummeryStyles}}
           expandIcon={<ExpandMoreIcon sx={{ fontSize: "2.3rem" }} />}
           aria-controls="panel1a-content"
           id="panel1a-header"
@@ -61,8 +76,13 @@ const MenuAccordion = () => {
           <Menu links={clothing} />
         </AccordionDetails>
       </Accordion>
-      <Accordion>
+      <Accordion
+      sx={{...accordionStyles, 
+       borderBottom: '1px solid #ede3e3'
+      }}
+      >
         <AccordionSummary
+         sx={{...accordionSummeryStyles}}
           expandIcon={<ExpandMoreIcon sx={{ fontSize: "2.3rem" }} />}
           aria-controls="panel1a-content"
           id="panel1a-header"
@@ -75,8 +95,13 @@ const MenuAccordion = () => {
           <Menu links={dresses} />
         </AccordionDetails>
       </Accordion>
-      <Accordion>
+      <Accordion
+      sx={{...accordionStyles, 
+       borderBottom: '1px solid #ede3e3'
+      }}
+      >
         <AccordionSummary
+         sx={{...accordionSummeryStyles}}
           expandIcon={<ExpandMoreIcon sx={{ fontSize: "2.3rem" }} />}
           aria-controls="panel1a-content"
           id="panel1a-header"
@@ -89,8 +114,13 @@ const MenuAccordion = () => {
           <Menu links={shoes} />
         </AccordionDetails>
       </Accordion>
-      <Accordion>
+      <Accordion
+      sx={{...accordionStyles, 
+       borderBottom: '1px solid #ede3e3'
+      }}
+      >
         <AccordionSummary
+         sx={{...accordionSummeryStyles}}
           expandIcon={<ExpandMoreIcon sx={{ fontSize: "2.3rem" }} />}
           aria-controls="panel1a-content"
           id="panel1a-header"
@@ -103,8 +133,13 @@ const MenuAccordion = () => {
           <Menu links={accessories} />
         </AccordionDetails>
       </Accordion>
-      <Accordion>
+      <Accordion
+      sx={{...accordionStyles, 
+       borderBottom: '1px solid #ede3e3'
+      }}
+      >
         <AccordionSummary
+         sx={{...accordionSummeryStyles}}
           expandIcon={<ExpandMoreIcon sx={{ fontSize: "2.3rem" }} />}
           aria-controls="panel1a-content"
           id="panel1a-header"

@@ -1,6 +1,7 @@
 import { FaInstagram, FaFacebook, FaPinterest } from "react-icons/fa";
 import { AiOutlineMail } from "react-icons/ai";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 import "./Footer.scss";
 import FooterAccordion from "./FooterAccordion";
@@ -42,17 +43,17 @@ const Footer = () => {
         <div className="app__footer-item">
           <p className="footer__links-header">Quick links</p>
           {quickLinks.map((link, i) => (
-            <a key={i} href="#">
+            <Link key={i} to="">
               {link}
-            </a>
+            </Link>
           ))}
         </div>
         <div className="app__footer-item">
           <p className="footer__links-header">about us</p>
           {aboutUs.map((aboutLink, i) => (
-            <a key={i} href="#">
+            <Link key={i} to="">
               {aboutLink}
-            </a>
+            </Link>
           ))}
         </div>
         <div className="app__footer-item">

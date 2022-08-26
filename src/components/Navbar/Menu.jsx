@@ -5,6 +5,7 @@ import { AccordionSummary } from "@mui/material";
 import { AccordionDetails } from "@mui/material";
 import ExpandMore from "@mui/icons-material/ExpandMore";
 import { Link } from "react-router-dom";
+import {accordionStyles, accordionSummeryStyles } from "../AccordionStyles";
 
 const Menu = ({ links }) => {
   return (
@@ -17,8 +18,11 @@ const Menu = ({ links }) => {
         >
           <ul>
             <li className="visible__links-header">
-              <Accordion>
+              <Accordion
+              sx={{...accordionStyles}}
+              >
                 <AccordionSummary
+                sx={{...accordionSummeryStyles}}
                   expandIcon={<ExpandMore sx={{ fontSize: "2.3rem" }} />}
                   arial-controls="panel1a-content"
                   id="panel1a-header"

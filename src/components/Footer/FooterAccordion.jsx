@@ -6,6 +6,7 @@ import { FaInstagram, FaFacebook, FaPinterest } from "react-icons/fa";
 import { AiOutlineMail } from "react-icons/ai";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { accordionStyles, accordionSummeryStyles } from "../AccordionStyles";
 
 const quickLinks = [
   "shipping + returns",
@@ -33,11 +34,16 @@ const FooterAccordion = () => {
       setShow(true);
     }
   };
+
   return (
     <>
-      <Accordion className="footer-responsive">
+      <Accordion className="footer-responsive"
+      sx={{...accordionStyles}}>
         <AccordionSummary
-          expandIcon={<ExpandMoreIcon sx={{ fontSize: "2.3rem" }} />}
+        sx={{
+          ...accordionSummeryStyles
+        }}
+          expandIcon={<ExpandMoreIcon sx={{ fontSize: "2.3rem", color: '#fff', opacity: '0.5' }} />}
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
@@ -64,9 +70,12 @@ const FooterAccordion = () => {
           ))}
         </AccordionDetails>
       </Accordion>
-      <Accordion className="footer-responsive">
+      <Accordion className="footer-responsive" sx={{...accordionStyles}}>
         <AccordionSummary
-          expandIcon={<ExpandMoreIcon sx={{ fontSize: "2.3rem" }} />}
+              sx={{
+                ...accordionSummeryStyles
+              }}
+          expandIcon={<ExpandMoreIcon sx={{ fontSize: "2.3rem", color: '#fff', opacity: '0.5' }} />}
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
@@ -93,9 +102,12 @@ const FooterAccordion = () => {
           ))}
         </AccordionDetails>
       </Accordion>
-      <Accordion className="footer-responsive">
+      <Accordion className="footer-responsive" sx={{...accordionStyles}}>
         <AccordionSummary
-          expandIcon={<ExpandMoreIcon sx={{ fontSize: "2.3rem" }} />}
+      sx={{
+        ...accordionSummeryStyles
+      }}
+          expandIcon={<ExpandMoreIcon sx={{ fontSize: "2.3rem", color: '#fff', opacity: '0.5' }} />}
           aria-controls="panel1a-content"
           id="panel1a-header"
         >

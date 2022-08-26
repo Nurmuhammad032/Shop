@@ -91,7 +91,7 @@ body.lock-scroll {
 }
 
 /* Navbar Accordion customize css */
-.app__menu .css-1elwnq4-MuiPaper-root-MuiAccordion-root {
+/* .app__menu .css-1elwnq4-MuiPaper-root-MuiAccordion-root {
   background-color: transparent !important;
   box-shadow: none !important;
 }
@@ -140,12 +140,12 @@ body.lock-scroll {
 }
 
 .app__menu .MuiAccordionSummary-expandIconWrapper:hover {
-  background-color: #fafafa !important;
-}
+  background-color: #fafafa !important; */
+/* } */
 /* Navbar Accordion customize css End */
 
 /* Footer Accordion customize css */
-.app__footer .css-1elwnq4-MuiPaper-root-MuiAccordion-root {
+/* .app__footer .css-1elwnq4-MuiPaper-root-MuiAccordion-root {
   background-color: transparent !important;
   box-shadow: none !important;
   border-top: 1px solid rgb(84, 84, 84) !important;
@@ -188,10 +188,10 @@ body.lock-scroll {
 }
 .app__footer .MuiAccordionSummary-expandIconWrapper {
   position: relative !important;
-}
+} */
 
 /* Fix select component in mui */
-.css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input.MuiSelect-select {
+/* .css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input.MuiSelect-select {
   font-size: 1.4rem !important;
 }
 
@@ -205,4 +205,4 @@ body.lock-scroll {
 
 .css-kk1bwy-MuiButtonBase-root-MuiMenuItem-root {
   font-size: 1.5rem !important;
-}
+} */
