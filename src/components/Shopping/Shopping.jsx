@@ -43,6 +43,7 @@ const Shopping = ({
 
   // Make responsive ImageGallery
   const responsiveMax768 = useMediaPredicate("(max-width: 768px)");
+  console.log(responsiveMax768);
 
   return (
     <div className="app__shopping">
@@ -62,7 +63,10 @@ const Shopping = ({
               thumbnailPosition="bottom"
             />
           </div>
-          <div className="app__shopping-description" ref={stickyRef}>
+          <div
+            className="app__shopping-description"
+            ref={responsiveMax768 ? {} : stickyRef}
+          >
             <div className="desc-heading">
               <h1>{items.description.productName}</h1>
               <p>{`$ ${items.description.productPrice}`}</p>

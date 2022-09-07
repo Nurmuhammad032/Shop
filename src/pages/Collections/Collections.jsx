@@ -53,41 +53,52 @@ const Collections = ({ header, data }) => {
 
   return (
     <>
-        <div className="app__collections">
-          <h1>{header}</h1>
-          <div className="app__collections-sort">
-            <p className="product-length">{data.length} products</p>
-            <Box sx={{ minWidth: 120 }} className="sort-box">
-              <FormControl fullWidth>
-                <InputLabel id="demo-simple-select-label">Product</InputLabel>
-                <Select
-                  labelId="demo-simple-select-label"
-                  id="demo-simple-select"
-                  value={product}
-                  label="Age"
-                  onChange={handleChange}
-                >
-                  <MenuItem value={"fromHigh"}>Price, high to low </MenuItem>
-                  <MenuItem value={"fromLow"}>Price, low to high</MenuItem>
-                  <MenuItem value={"A-Z"}>Alphabetically, A-Z</MenuItem>
-                  <MenuItem value={"Z-A"}>Alphabetically, Z-A</MenuItem>
-                </Select>
-              </FormControl>
-            </Box>
-          </div>
-          <div className="app__collections-infos">
-            {sorted.map((item, i) => (
-              <ShopComponent
-                key={i}
-                image={item.images[0].original}
-                hoverImg={item.images[1].thumbnail}
-                info={item.description.productName}
-                price={`$ ${item.description.productPrice}.00`}
-                link={item.id}
-              />
-            ))}
-          </div>
+      <div className="app__collections">
+        <h1>{header}</h1>
+        <div className="app__collections-sort">
+          <p className="product-length">{data.length} products</p>
+          <Box sx={{ minWidth: 120 }} className="sort-box">
+            <FormControl fullWidth>
+              <InputLabel id="product" sx={{ fontSize: "1.5rem" }}>
+                Product
+              </InputLabel>
+              <Select
+                labelId="product"
+                id="demo-simple-select"
+                value={product}
+                label="Product"
+                onChange={handleChange}
+                sx={{ fontSize: "1.5rem" }}
+              >
+                <MenuItem value={"fromHigh"} sx={{ fontSize: "1.5rem" }}>
+                  Price, high to low{" "}
+                </MenuItem>
+                <MenuItem value={"fromLow"} sx={{ fontSize: "1.5rem" }}>
+                  Price, low to high
+                </MenuItem>
+                <MenuItem value={"A-Z"} sx={{ fontSize: "1.5rem" }}>
+                  Alphabetically, A-Z
+                </MenuItem>
+                <MenuItem value={"Z-A"} sx={{ fontSize: "1.5rem" }}>
+                  Alphabetically, Z-A
+                </MenuItem>
+              </Select>
+            </FormControl>
+          </Box>
         </div>
+        <div className="app__collections-infos">
+          {sorted.map((item, i) => (
+            <ShopComponent
+              key={i}
+              image={item.images[0].original}
+              hoverImg={item.images[1].thumbnail}
+              info={item.description.productName}
+              price={`$ ${item.description.productPrice}.00`}
+              link={item.id}
+            />
+          ))}
+        </div>
+      </div>
     </>
   );
 };
