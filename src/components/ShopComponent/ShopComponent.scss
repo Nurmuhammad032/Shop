@@ -5,6 +5,7 @@
   margin-right: 3rem;
 
   .app__shop-img {
+    display: block;
     width: 100%;
     position: relative;
     img {
@@ -12,7 +13,6 @@
       width: 100%;
       height: 100%;
     }
-    
 
     .app__shop-link {
       display: block;

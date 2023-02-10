@@ -58,7 +58,8 @@ const CartItems = () => {
                     className="app__cartItems"
                     key={i}
                     whileInView={{ y: [25, 0], opacity: [0, 1] }}
-                    transition={{ delay: (i % i) + 0.15 }}
+                    transition={{ delay: (i % i) + 0.15, type: "tween" }}
+                    viewport={{ once: true }}
                   >
                     <div className="app__cart-photo">
                       <img src={cart.imgUrl} alt="cartImg" />

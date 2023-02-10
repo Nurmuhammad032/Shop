@@ -1,7 +1,12 @@
 import React from "react";
-import { Footer, Navbar, CartItems } from "./components/index";
+import { Footer, Navbar, CartItems, ScrollTop } from "./components/index";
 import { Category, Infos, Landing, Products, Shop } from "./containers";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  useLocation,
+} from "react-router-dom";
 import {
   Shoes,
   ShoesCollection,
@@ -15,6 +20,7 @@ const App = () => {
   return (
     <Router>
       <Navbar />
+      <ScrollTop />
       <CartItems />
       <Routes>
         <Route
